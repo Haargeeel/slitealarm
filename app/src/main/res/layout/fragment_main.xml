@@ -8,11 +8,120 @@
 
     <TextView
         android:id="@+id/time"
-        android:text="@string/placeholder"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:layout_centerInParent="true"
         />
+
+    <LinearLayout
+        android:id="@+id/alarm_layout"
+        android:orientation="horizontal"
+        android:layout_below="@id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/alarm_time"
+            android:text=""
+            android:textSize="15sp"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/alarm_cancel"
+            android:text="CANCEL"
+            android:textColor="#f00"
+            android:textSize="15sp"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/set_time_layout"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="50dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TimePicker
+            android:id="@+id/timepicker"
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            </TimePicker>
+
+        <LinearLayout
+            android:id="@+id/set_time_buttons"
+            android:orientation="horizontal"
+            android:layout_weight="0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/set_time_cancel"
+                android:text="CANCEL"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/set_time_ok"
+                android:text="OK"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sleep_layout"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/alarm_layout"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="#666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sleep_button"
+            android:text="SLEEP"
+            android:textColor="#f00"
+            android:layout_marginRight="4dp"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sleep_end_button"
+            android:text="TURN OFF"
+            android:textColor="#f00"
+            android:layout_marginLeft="4dp"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
 </RelativeLayout>
